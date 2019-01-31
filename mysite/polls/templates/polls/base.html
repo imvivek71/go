@@ -1,19 +1,35 @@
+{% load staticfiles %}
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-3.3.7-dist/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+
 </head>
 
 <body>
 
-<hr><p>Vote Application</p><hr>
+<hr>
+          {% include  "polls/header.html"  %}
 
-{% block  main_content %}
+<div class="jumbotron">
+      <div class="container">
 
-{% endblock  %}
+          {% block  main_content %}
 
-{% include  "polls/footer.html"  %}
+          {% endblock  %}
+
+          {% include  "polls/footer.html"  %}
+
+      </div>
+</div>
 
 </body>
 </html>
