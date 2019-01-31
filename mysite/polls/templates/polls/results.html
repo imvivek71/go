@@ -9,6 +9,9 @@
 
 
 </ul>
-<a href=" {% url  'polls:detail' question.id }"> Vote Again</a>
+<a href="{% url  'polls:vote' question.id  %}" > Vote Again</a><br>
+<a href="http://127.0.0.1:8000/polls" style="color:red;">  Return to questions</a>
+
+
 
 {% endblock %}
